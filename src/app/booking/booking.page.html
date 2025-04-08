@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="booking-form">
+    <h2 class="h-title">Booking Form</h2>
+    <form (ngSubmit)="submitBooking()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" [(ngModel)]="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" [(ngModel)]="date" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" [(ngModel)]="message" required></textarea>
+        </div>
+        <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+</ion-content>

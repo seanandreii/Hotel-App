@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="wrapper">
+    <div class="logo">
+        <img src="assets/icon/main.jpg">
+    </div>
+    <form class="p-3 mt-3" id="signIn" action="signin.php" method="POST">
+      <div class="login-title">
+        <h1 class="log-h1">LOGIN</h1>
+        <p class="log-p">Enter your email to sign in to this app</p>
+      </div>
+      <div class="form-field d-flex align-items-center">
+          <span class="far fa-user"></span>
+          <input [(ngModel)]="email" type="text" name="email" id="email" placeholder="email@domain.com" required>
+      </div>
+      <div class="form-field d-flex align-items-center">
+          <span class="fas fa-key"></span>
+          <input [(ngModel)]="password" type="password" name="password" id="password" placeholder="password" required>
+      </div>
+      <button type="submit" name="signIn" class="login-btn" (click)="login()">Login</button>
+      <a href="./register"><button type="button" class="register-btn">Sign up</button></a>
+    </form>
+    
+    <p class="cont-span"><span>or continue with</span></p>
+
+    <div class="google">
+      <a href="./tabs"><button class="google-btn"><img src="assets/icon/Google_logo.svg">Google</button></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="privacy">
+      <p>By clicking continue, you agree to our <b>Terms of Service</b> and <b>Privacy Policy</b></p>
+    </div>
+  </footer>
+</ion-content>

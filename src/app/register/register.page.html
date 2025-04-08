@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+    <div class="top">
+        <img src="assets/icon/top.png">
+    </div>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="assets/icon/main.jpg">
+        </div>
+  
+        <form (submit)="onSubmit($event)" class="p-3 mt-3">
+            <div class="login-title">
+                <h1 class="log-h1">Create an account</h1>
+                <p class="log-p">Enter your email to sign up for this app</p>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" [(ngModel)]="fName" name="fName" placeholder="First Name">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" [(ngModel)]="lName" name="lName" placeholder="Last Name">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="email" [(ngModel)]="email" name="email" placeholder="email@domain.com">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" [(ngModel)]="password" name="password" placeholder="password">
+            </div>
+            <button type="submit" class="register-btn">Sign up</button>
+        </form>
+    </div>
+  
+    <footer>
+        <div class="privacy">
+            <p>By clicking continue, you agree to our <b>Terms of Service</b> and <b>Privacy Policy</b></p>
+        </div>
+    </footer>
+  </ion-content>
+  
